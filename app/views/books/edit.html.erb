@@ -1,0 +1,24 @@
+<h1><%= @book.title %></h1>
+
+<%= form_with model: @book do |form| %>
+  <div>
+    <%= form.label "Título" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label "Autor" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label "Descrição" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Volta", books_path %>

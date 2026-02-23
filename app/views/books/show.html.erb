@@ -1,0 +1,8 @@
+<h3><%= @book.title %></h3>
+<p>Título: <%= @book.author %></p>
+<p>Descrição: <%= @book.description %></p>
+
+<%= link_to "Editar", "/books/#{@book.id}/edit" %>
+<%= link_to "Remover", "/books/#{@book.id}", data: { turbo_method: :delete, turbo_confirm: "Você quer mesmo apagar?" } %>
+
+<%= link_to "Volta", books_path %>
