@@ -11,6 +11,7 @@ jobs:
         with:
           ruby-version: 3.2
           bundler-cache: true
+          bundler: '2.7.2'
       - name: Install dependencies
         run: bundle install
       - name: Run tests
