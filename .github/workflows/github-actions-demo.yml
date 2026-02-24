@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: Setup Ruby
         uses: ruby/setup-ruby@1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
       - name: Install dependencies
         run: bundle install
       - name: Run tests
