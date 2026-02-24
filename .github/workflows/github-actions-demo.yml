@@ -6,10 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Ruby
-        uses: ruby/setup-ruby@1
-        with:
-          ruby-version: 3.2
-          bundler-cache: true
+        uses: ruby/setup-ruby@3.2
       - name: Install dependencies
         run: bundle install
       - name: Run tests
