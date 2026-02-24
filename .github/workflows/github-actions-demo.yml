@@ -1,0 +1,13 @@
+name: GitHub Actions Demo - MVC Manual Project
+run-name: ${{ github.actor }}
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@1
+      - name: Install dependencies
+        run: bundle install
+      - name: Run tests
+        run: bundle exec rails test
